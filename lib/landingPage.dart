@@ -1,6 +1,6 @@
 import 'dart:async';
 
-import 'package:dgblife_lunch/mainPage.dart';
+import 'package:dgblife_lunch/tapPage.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +13,7 @@ class _LandingPageState extends State<LandingPage>{
   @override
   void initState() {
     Timer(Duration(seconds: 3),(){
-      Get.to(MainPage());
+      Get.to(TapPage());
     });
   }
   @override
@@ -21,7 +21,10 @@ class _LandingPageState extends State<LandingPage>{
     return Scaffold(
       body: Container(
         color: Colors.blueAccent,
-        child: Center(child: Text("점심은 우리의 생명이니까")),
+        child: Center(child: Text("점심은 우리의 생명이니까", style: TextStyle(
+          fontSize: 30,
+          fontWeight: FontWeight.bold
+        ),)),
       ),
     );
   }
